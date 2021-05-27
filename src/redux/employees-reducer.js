@@ -7,9 +7,9 @@ export const setEmployeesAC = (employees) => ({
   employees
 });
 
-export const toggleEmployeeStatusAC = (id, status) => ({
+export const toggleEmployeeStatusAC = (item, status) => ({
   type: TOGGLE_STATUS,
-  id,
+  item,
   status
 });
 
@@ -45,19 +45,15 @@ const employeesReducer = (state = initialState, action) => {
       };
     }
     case TOGGLE_STATUS: {
-      let empObj = { id: action.id };
-      console.log(action.id)
       state.employees.map(e => {
-        if(e.id === action.id) {
+        if(e.id === action.item.id) {
           e.status = action.status
           if(action.status === true) {
-              state.activeEmployees.push(empObj);
+              state.activeEmployees.push(action.item);
           }
            else {
-              console.log('deteletd', e.id)
               let element = state.activeEmployees.find(a => a.id === e.id);
               let index = state.activeEmployees.indexOf(element);
-              console.log(index)
               if (index > -1) {
                 state.activeEmployees.splice(index, 1);
               }

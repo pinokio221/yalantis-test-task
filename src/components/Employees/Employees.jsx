@@ -4,7 +4,7 @@ import { setEmployeesThunk, toggleEmployeeStatusAC } from "../../redux/employees
 import { connect, useDispatch, useSelector } from "react-redux";
 import styles from './Employees.module.css'
 import Alphabet from './Alphabet'
-
+import Birthday from './Birthday'
 
 const Employees = (props) => {
   const dispatch = useDispatch();
@@ -19,8 +19,19 @@ const Employees = (props) => {
     });
   }, []);
 
-  const toggleEmployeeStatus = (id, status) => {
-      props.toggleEmployeeStatusAC(id, status)
+  const toggleEmployeeStatus = (item, status) => {
+      props.toggleEmployeeStatusAC(item, status)
+  }
+
+  const sortByLastName = (arr) => {
+    arr.sort(function (a, b) {
+      if (a.lastName < b.lastName) {
+        return -1;
+      }
+      if (a.lastName > b.lastName) {
+        return 1;
+      }
+    });
   }
 
   const employees = useSelector(state => state.employeesPage.employees);
@@ -28,10 +39,8 @@ const Employees = (props) => {
   
   return(
       <div className={styles.wrapper}>
-          <Alphabet employees={employees} toggleEmployeeStatus={toggleEmployeeStatus}/>
-          <div>
-              <span></span>
-          </div>
+          <Alphabet sortByLastName={sortByLastName} employees={employees} toggleEmployeeStatus={toggleEmployeeStatus}/>
+          <Birthday sortByLastName={sortByLastName} activeEmployees={props.activeEmployees}/>
       </div>
   )
 };

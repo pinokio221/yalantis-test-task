@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Employees.module.css";
 
+
 const Alphabet = (props) => {
   const alphabet = [
     "A",
@@ -31,6 +32,7 @@ const Alphabet = (props) => {
     "Z",
   ];
   let employeeArr = props.employees.slice();
+  props.sortByLastName(employeeArr);
   return (
     <div className={styles.alphabet}>
       {alphabet.map((a) => {
@@ -48,14 +50,18 @@ const Alphabet = (props) => {
                     type="radio"
                     value="active"
                     checked={e.status === true}
-                    onChange={() => { props.toggleEmployeeStatus(e.id, true) }}
+                    onChange={() => {
+                      props.toggleEmployeeStatus(e, true);
+                    }}
                   />
                   <label for="active">Active</label>
                   <input
                     type="radio"
                     value="not-active"
                     checked={e.status === false}
-                    onChange={() => { props.toggleEmployeeStatus(e.id, false) }}
+                    onChange={() => {
+                      props.toggleEmployeeStatus(e, false);
+                    }}
                   />
                   <label for="not-active">Not Active</label>
                 </div>

@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 1px solid red;
+}
+
+.monthCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.birthdaysItems {
+    display: flex;
+    flex-direction: column;
+}
