@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Route exact path="/" render={() => <Redirect to="/home" />} />
-      <Route path="/employees" render={() => <Employees />} />
+      <Route path="/yalantis-tesemployees" render={() => <Employees />} />
     </div>
   );
 }
