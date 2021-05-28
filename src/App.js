@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Route exact path="/gh-pages-url" render={() => <Redirect to="/home" />} />
-      <Route path="/gh-pages-url/employees" render={() => <Employees />} />
+      <Route exact path="/" render={() => <Redirect to="/home" />} />
+      <Route path="/employees" render={() => <Employees />} />
     </div>
   );
 }
