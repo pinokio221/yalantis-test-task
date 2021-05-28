@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pinokio221/yalantis-test-task/static/css/main.2906e3e2.chunk.css",
+    "main.js": "/pinokio221/yalantis-test-task/static/js/main.c44e23eb.chunk.js",
+    "main.js.map": "/pinokio221/yalantis-test-task/static/js/main.c44e23eb.chunk.js.map",
+    "runtime-main.js": "/pinokio221/yalantis-test-task/static/js/runtime-main.c0666252.js",
+    "runtime-main.js.map": "/pinokio221/yalantis-test-task/static/js/runtime-main.c0666252.js.map",
+    "static/js/2.64a4ffc0.chunk.js": "/pinokio221/yalantis-test-task/static/js/2.64a4ffc0.chunk.js",
+    "static/js/2.64a4ffc0.chunk.js.map": "/pinokio221/yalantis-test-task/static/js/2.64a4ffc0.chunk.js.map",
+    "index.html": "/pinokio221/yalantis-test-task/index.html",
+    "static/css/main.2906e3e2.chunk.css.map": "/pinokio221/yalantis-test-task/static/css/main.2906e3e2.chunk.css.map",
+    "static/js/2.64a4ffc0.chunk.js.LICENSE.txt": "/pinokio221/yalantis-test-task/static/js/2.64a4ffc0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0666252.js",
+    "static/js/2.64a4ffc0.chunk.js",
+    "static/css/main.2906e3e2.chunk.css",
+    "static/js/main.c44e23eb.chunk.js"
+  ]
+}
