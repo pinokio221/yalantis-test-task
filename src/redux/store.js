@@ -13,8 +13,6 @@ let reducers = combineReducers({
   employeesPage: persistReducer(employeesPersistConfig, employeesReducer),
 });
 
-
 export const store = createStore(reducers, compose(applyMiddleware(thunk)));
 export const persistor = persistStore(store);
 window.store = store;
-

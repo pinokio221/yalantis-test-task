@@ -1,35 +1,9 @@
 import React from "react";
 import styles from "./Employees.module.css";
 
-
 const Alphabet = (props) => {
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
+  const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L",
+                    "M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
   ];
   let employeeArr = props.employees.slice();
   props.sortByLastName(employeeArr);
@@ -47,6 +21,7 @@ const Alphabet = (props) => {
                 </span>
                 <div>
                   <input
+                    className={styles.statusRadio}
                     type="radio"
                     value="active"
                     checked={e.status === true}
@@ -57,6 +32,7 @@ const Alphabet = (props) => {
                   <label for="active">Active</label>
                   <input
                     type="radio"
+                    className={styles.statusRadio}
                     value="not-active"
                     checked={e.status === false}
                     onChange={() => {
@@ -70,8 +46,8 @@ const Alphabet = (props) => {
           }
         });
         return (
-          <div className={styles.letter}>
-            <b>{a}</b>
+          <div className={styles.letterBlock}>
+            <span className={styles.letter}>{a}</span>
             <div>{foundItems <= 0 ? <span>----</span> : sorted}</div>
           </div>
         );
