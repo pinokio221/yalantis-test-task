@@ -10,7 +10,7 @@ import { PersistGate } from "redux-persist/integration/react";
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename ="/yalantis-test-task">
+      <BrowserRouter basename ={process.env.PUBLIC_URL}>
         <App />
       </BrowserRouter>
     </PersistGate>
